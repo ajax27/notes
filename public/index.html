@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Node Notes</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Ajax27s Node Notebook</h1>
+  <form id="user_form">
+    <fieldset>
+      <label class="heading">Get Notes</label><br />
+      <label>Get Notes by ID:</label>
+      <input id="noteId" name="noteId" type="text" placeholder="Note by ID" />
+      <button id="getButton" name="getButton" value="submit" type="submit">Get Posts</button>
+    </fieldset>
+  </form>
+
+  <form id="user_form_post">
+    <fieldset>
+      <label class="heading">Post New Note</label><br />
+      <label>Post Title:</label>
+      <input id="titleInput" name="title" type="text" placeholder="Note Title" /><br />
+      <label>Post Content</label>
+      <textarea class="form-control" name="content" id="contentInput" rows="3"></textarea><br />
+      <button id="postButton" name="postButton" type="submit" method="POST">Post Note</button>
+    </fieldset>
+  </form>
+
+  <form id="user_form_delete">
+    <fieldset>
+      <label class="heading">Delete Note</label><br />
+      <label>Post ID:</label>
+      <input id="noteId" name="noteId" type="text" placeholder="Note ID" />
+      <button type="submit">Delete Note</button>
+    </fieldset>
+  </form>
+
+  <form id="user_form_put">
+    <fieldset>
+      <label class="heading">Update Note: </label><br />
+      <label>Post Title:</label>
+      <input id="noteInput" type="text" name="title" placeholder="Note Title" /><br />
+      <label>Post Content</label>
+      <textarea class="form-control" name="content" id="contentInput" rows="3"></textarea><br />
+      <label>Post ID:</label>
+      <input id="noteId" name="noteId" type="text" placeholder="Note ID" />
+      <button id="putButton" value="submit" type="submit" name="putButton" method="PUT">Update Note</button>
+    </fieldset>
+  </form>
+
+  <h2>Notes in Database: </h2>
+  <div id="results"></div>
+
+  <script src="./api.js"></script>
+</body>
+
+</html>
